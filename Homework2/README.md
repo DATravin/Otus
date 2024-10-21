@@ -61,6 +61,10 @@ s3cmd --config=/home/ubuntu/.s3cfg ls s3://otus-bucket-b1gcs058gd4fa8eeviec
 https://github.com/users/DATravin/projects/3/views/1 
 добавил 2 таски ДО основного пайплана. Загрузить данные на hdfs с s3
 
+## Разрушить все 
+
+![image](https://github.com/user-attachments/assets/7ad239a6-2e62-4ed0-8ac0-4f0111a3f9ed)
+
 
 
 
