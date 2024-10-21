@@ -25,6 +25,8 @@ bucket_name = "otus-bucket-b1gcs058gd4fa8eeviec"
 
 Результат:
 
+![image](https://github.com/user-attachments/assets/21ec9da3-7538-4663-9b3b-d7275b3ab5e2)
+
 
 ## поднять Spark-cluster
 
