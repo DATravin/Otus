@@ -24,3 +24,23 @@ bucket_name = "otus-bucket-b1gcs058gd4fa8eeviec"
 ## поднять Spark-cluster
 
 ![image](https://github.com/user-attachments/assets/03b689fe-9ea6-4fbd-8587-d143265c6e47)
+
+Поднят. Но пока с ограниченным ресурсом (40 GB на хост)
+
+Тут параметры:
+
+![image](https://github.com/user-attachments/assets/a5a09787-2991-4710-9cbb-7f0d94520496)
+
+
+## подрубится к мастер-ноде. И скопировать из S3 в HDFS
+
+Сделано. Вот результаты:
+
+
+## Предложить способы для оптимизации затрат
+
+Ничего кроме прерываемых VM не знаю:(
+
+
+
+
