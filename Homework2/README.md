@@ -41,6 +41,10 @@ bucket_name = "otus-bucket-b1gcs058gd4fa8eeviec"
 
 Ничего кроме прерываемых VM не знаю:(
 
+## занести в канбан
+
+https://github.com/users/DATravin/projects/3/views/1 
+добавил 2 таски ДО основного пайплана. Загрузить данные на hdfs с s3
 
 
 
