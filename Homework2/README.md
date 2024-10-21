@@ -17,6 +17,10 @@ bucket_name = "otus-bucket-b1gcs058gd4fa8eeviec"
 
 ![image](https://github.com/user-attachments/assets/6a7b20fe-531f-4b4d-8bbb-190dc63ebce5)
 
+Посмотреть содержимое:
+s3cmd --config=/home/ubuntu/.s3cfg ls s3://otus-bucket-b1gcs058gd4fa8eeviec
+
+
 ## скопировать данные 
 
 Данные копируются внутри скрипта user_date.sh
@@ -42,6 +46,10 @@ bucket_name = "otus-bucket-b1gcs058gd4fa8eeviec"
 ## подрубится к мастер-ноде. И скопировать из S3 в HDFS
 
 Сделано. Вот результаты:
+Пока места хватило на 26 объектов.
+
+![image](https://github.com/user-attachments/assets/9874924c-6720-4238-a31a-454914dc2863)
+
 
 
 ## Предложить способы для оптимизации затрат
@@ -52,6 +60,7 @@ bucket_name = "otus-bucket-b1gcs058gd4fa8eeviec"
 
 https://github.com/users/DATravin/projects/3/views/1 
 добавил 2 таски ДО основного пайплана. Загрузить данные на hdfs с s3
+
 
 
 
