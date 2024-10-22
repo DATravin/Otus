@@ -76,4 +76,15 @@ https://github.com/users/DATravin/projects/3/views/1
 
 
 
+Загрузку всех файлов на s3 делал командой:
+
+s3cmd cp \
+    --config=/home/ubuntu/.s3cfg \
+    --acl-public \
+    s3://otus-mlops-source-data/* \
+    s3://otus-bucket-b1gcs058gd4fa8eeviec/
+
+
+    
+
 
