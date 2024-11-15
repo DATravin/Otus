@@ -44,7 +44,9 @@
 Весь код со скриптами и main.tf лежит в [https://github.com/DATravin/otus-hw3-valid-data ](https://github.com/DATravin/otus-hw3-valid-data)
 
 Файл main.tf: https://github.com/DATravin/otus-hw3-valid-data/blob/main/infrastructure/main.tf
+
 Файл со скриптом очистки: https://github.com/DATravin/otus-hw3-valid-data/blob/main/infrastructure/scripts/cleaning_data.py
+
 Файл со скриптом для перекладывания на s3: https://github.com/DATravin/otus-hw3-valid-data/blob/main/infrastructure/scripts/upload_data_from_hdfs.sh
 
 
