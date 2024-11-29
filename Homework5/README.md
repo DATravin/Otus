@@ -25,6 +25,23 @@
 
 ![image](https://github.com/user-attachments/assets/444f41a7-9837-479d-9c51-7e63c84d1338)
 
+После некоторого дебага скрипт отработал
+
+![image](https://github.com/user-attachments/assets/4b0e4cfe-c796-4a2d-9c8f-42c005a32b22)
+
+Первый запуск был успешен, но там другой скрипт работа (из семинара). А вот последний - это уже целевой
+
+Результат с очещенными данными залит на s3
+Партиционированный по дате транзакции
+
+![image](https://github.com/user-attachments/assets/bae87bc9-098d-4b21-9194-a1a617365685)
+
+# второй запуск.
+
+Добавляем еще один файл-период
+
+![image](https://github.com/user-attachments/assets/0bb2173c-b901-4a40-8312-2167ee51b485)
+
 
 
 
