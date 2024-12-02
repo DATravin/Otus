@@ -23,6 +23,13 @@
 
 # Первичный запуск дага
 
+Даги появились в UI
+
+![image](https://github.com/user-attachments/assets/195f2754-2bad-41c5-a9eb-8472c3d8b825)
+
+Я переназвал мой боевой - data_preprocess. А из семинара с постфиксом _old. Старый - чисто для тестирования.
+
+
 ![image](https://github.com/user-attachments/assets/444f41a7-9837-479d-9c51-7e63c84d1338)
 
 После некоторого дебага скрипт отработал
@@ -59,7 +66,9 @@
 ![image](https://github.com/user-attachments/assets/7738d73c-ebd7-4e49-a535-84f6c711e883)
 
 Ссылка на репу: https://github.com/DATravin/otus-hw5-airflow
+
 Ссылка на даг: https://github.com/DATravin/otus-hw5-airflow/blob/main/dags/data_preprocess.py
+
 Ссылка на исполняемый файл: https://github.com/DATravin/otus-hw5-airflow/blob/main/src/cleaning_data.py
 
 Я понял, что передать окружение можно через properties. Но из примеров в интернете нашел только передачу специального архива с окружением.
