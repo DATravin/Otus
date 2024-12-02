@@ -27,20 +27,48 @@
 
 После некоторого дебага скрипт отработал
 
-![image](https://github.com/user-attachments/assets/4b0e4cfe-c796-4a2d-9c8f-42c005a32b22)
-
-Первый запуск был успешен, но там другой скрипт работа (из семинара). А вот последний - это уже целевой
+![image](https://github.com/user-attachments/assets/57ad1a4b-aeca-49ef-b2a0-4e5fa9f79f93)
 
 Результат с очещенными данными залит на s3
 Партиционированный по дате транзакции
 
-![image](https://github.com/user-attachments/assets/bae87bc9-098d-4b21-9194-a1a617365685)
+![image](https://github.com/user-attachments/assets/ddc8edf1-d53b-498d-9a61-793f06cf3505)
+
 
 # второй запуск.
 
 Добавляем еще один файл-период
 
-![image](https://github.com/user-attachments/assets/0bb2173c-b901-4a40-8312-2167ee51b485)
+![image](https://github.com/user-attachments/assets/6196f19a-b83b-4d80-8aa1-b84a5cbad9e6)
+
+Запускаем DAG
+
+Два запуска прошли успешно
+
+![image](https://github.com/user-attachments/assets/06b99639-d625-43f4-907c-715517931c67)
+
+На s3 появились новые периоды
+
+![image](https://github.com/user-attachments/assets/9b91a55a-2580-4696-a7cd-acadf63c4763)
+
+Можем запустить еще раз, но тут важно, что при внутри скрипта проходит проверка на наличие новые периодов.
+И если их нет, то скрипт закрывается без прохождения процедуры очистки.
+
+Вот отработал третитий успешный запуск
+
+![image](https://github.com/user-attachments/assets/7738d73c-ebd7-4e49-a535-84f6c711e883)
+
+Ссылка на репу: https://github.com/DATravin/otus-hw5-airflow
+Ссылка на даг: https://github.com/DATravin/otus-hw5-airflow/blob/main/dags/data_preprocess.py
+Ссылка на исполняемый файл: https://github.com/DATravin/otus-hw5-airflow/blob/main/src/cleaning_data.py
+
+Я понял, что передать окружение можно через properties. Но из примеров в интернете нашел только передачу специального архива с окружением.
+Как это сделать полностью - не ясно. Надеюсь, в следующих ДЗ будут примеры.
+Так же заметил неприятную особенность.
+Если у нас в силу каких-то обстоятельств не отработал полностью даг. Но кластер уже собрался, то он не разбирается автоматом.
+Что приводит к незапуску уже новый иттераций (так как ресурс ограничен и на 2 кластера его уже не хватает). 
+Приходилось разбирать в UI руками.
+
 
 
 
