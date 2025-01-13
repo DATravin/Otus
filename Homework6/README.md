@@ -46,6 +46,13 @@
 
 mlflow server --backend-store-uri postgresql://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}?sslmode=verify-full --default-artifact-root s3://${S3_BUCKET}/artifacts -h 0.0.0.0 -p 8000
 
+Вся логика сборки VM в Mlflow:
+https://github.com/DATravin/otus-hw6-mlflow/blob/stage-0.0.1/infra/modules/mlflow/main.tf
+
+И .sh файлик со всеми подготовительными шагами для VM:
+https://github.com/DATravin/otus-hw6-mlflow/blob/stage-0.0.1/infra/modules/mlflow/scripts/setup.sh 
+
+
 # Airflow
 
 Обучение модели реализовано в ввиде дага. Даг лежит тут:
