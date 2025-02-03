@@ -38,11 +38,19 @@ https://github.com/DATravin/otus-hw7-valid/tree/stage-0.0.1
 
 ![image](https://github.com/user-attachments/assets/55363721-973f-4c26-97c8-b550283f8723)
 
-Новая модель - Версия 2. Становится Staging
+Новая модель - Версия 3 (версию 2 пропустил, была ошибка). Становится Staging
 
-![image](https://github.com/user-attachments/assets/cbc75955-3458-4756-912d-2e7b3cc5d2ce)
+![image](https://github.com/user-attachments/assets/f0e02a6a-1bde-4e9c-851a-510fd9731ba1)
 
+Модуль с AБ-Тестом отработал
 
+![image](https://github.com/user-attachments/assets/ecc66ba5-cdda-431a-a14d-e2d6c46e4ad5)
+
+Теперь смотрим статус модели:
+
+![image](https://github.com/user-attachments/assets/57055040-0449-4b2a-8dc0-08b133266263)
+
+Т.е. статус изменился. Новая не лучше старой
 
 # Ссылки:
 
