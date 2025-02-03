@@ -52,6 +52,14 @@ https://github.com/DATravin/otus-hw7-valid/tree/stage-0.0.1
 
 Т.е. статус изменился. Новая не лучше старой
 
+# проведем контрольный эксперимент:
+
+Видим, что второй запуск также успешен
+
+![image](https://github.com/user-attachments/assets/c9e61123-d1b0-49c8-bf88-5c11aecdb87d)
+
+
+
 # Ссылки:
 
 Ссылка на dag
@@ -65,7 +73,6 @@ https://github.com/DATravin/otus-hw7-valid/blob/stage-0.0.1/src/model_fit_ver3.p
 Ссылка на модуль АБ-теста
 
 https://github.com/DATravin/otus-hw7-valid/blob/stage-0.0.1/src/model_verif.py
-
 
 Смотрим, что получилось
 
