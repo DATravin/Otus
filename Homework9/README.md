@@ -1,11 +1,28 @@
 
 Выполнение ДЗ:
 
+# Архитектура
+Архитектура решения представляем собой сборку terraform из:
 
-на базе предыдущих ДЗ я сделал процедуру "inference"
+VM с установленными Docker и приблудами для работы с кубером
+https://github.com/DATravin/otus-hw9-k8/blob/stage-0.0.1/infra/modules/compute/main.tf 
 
-Его специфика в том, что мы не поднимаем м ходим в ML-flow, а работает уже с артефактом, который был до этого создан ml-flow
-и лежит на s3 (модель)
+Сам куберкластер:
+https://github.com/DATravin/otus-hw9-k8/blob/stage-0.0.1/infra/modules/kuber/main.tf 
+
+Файлов с приложением:
+https://github.com/DATravin/otus-hw9-k8/blob/stage-0.0.1/infra/app/app.py
+
+и самого рабочего мудуля с предсказанием
+https://github.com/DATravin/otus-hw9-k8/blob/stage-0.0.1/infra/app/infrerence_app.py 
+
+# инференс
+
+## docker
+
+Специфика решения в том, что в работе inference у нас используется артифакт их Mlflow.
+Но мы не поднимаем и не ходим в ML-flow, а работаем уже с артефактом, который был до этого создан ml-flow
+и лежит на s3 (модель). В него подается тестовый семлп, на который модель должна веруть score
 
 далее был собран контейнер, содержащий:
 -app
@@ -18,9 +35,18 @@
 Пришлось ставить на ubuntu 22.
 
 После контейнер был загружена в репозиторий на docker.hub
+Все по контейнере лежит тут:
 
-После этого на отдельной VM был развернуть kind кластер
+https://github.com/DATravin/otus-hw9-k8/tree/stage-0.0.1/infra/app 
+
+## kuber
+
+Далее были поднятые все сущности на Kuber'е
 подняты сервис, ингресс и деплоймент с указанием на контейнер с приложением.
+Все лежит тут:
+https://github.com/DATravin/otus-hw9-k8/tree/stage-0.0.1/k8s 
+
+## результат
 
 Кластер развернут. 4 ноды:
 ![image](https://github.com/user-attachments/assets/0f336e43-ae23-404b-885a-2e50c2ac5395)
@@ -39,8 +65,9 @@
 
 это означает, что инференс штатно сработал
 
+Вся репа с заданием лежиим тут:
+https://github.com/DATravin/otus-hw9-k8/tree/stage-0.0.1 
 
-
-
+## разобраться с cicd сил уже не хватило:(
 
 
