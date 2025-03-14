@@ -37,3 +37,10 @@
    ![image](https://github.com/user-attachments/assets/50a5f961-770d-4375-a33b-dfc2ce6dcfd6)
 
 
+4) кубер поднять
+
+   ![image](https://github.com/user-attachments/assets/640803bd-49d4-494e-9ddf-f79347cfe03b)
+
+   
+
+
