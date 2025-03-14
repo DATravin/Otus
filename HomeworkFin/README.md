@@ -39,8 +39,18 @@
 
 4) кубер поднять
 
+   Вердикты выдаются:
+
+![image](https://github.com/user-attachments/assets/0d21dbe8-bfb3-4002-8194-1df523366cb5)
+
+
    ![image](https://github.com/user-attachments/assets/640803bd-49d4-494e-9ddf-f79347cfe03b)
 
-   
+
+   ![image](https://github.com/user-attachments/assets/e8dd770f-f75f-4d0b-82c2-3ced4fc30d3d)
+
+
+
+![image](https://github.com/user-attachments/assets/50866f11-a55e-40fd-bc16-29fd6fbf0ee0)
 
 
