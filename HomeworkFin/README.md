@@ -70,8 +70,9 @@ https://github.com/DATravin/otus-final-project/tree/main/infra_deploy
 - VM с установленным docker
 - K8s cluster
 - dockerhub (хранилище образов)
+- также дополнительно были подняты Grafana и Prometheus
 
-### Механика
+#### Механика
 
 При сборке происходит настройка всего окружение.
 А далее одним скриптом происходит:
@@ -81,7 +82,7 @@ https://github.com/DATravin/otus-final-project/tree/main/infra_deploy
 
 Инструкции для k8s: https://github.com/DATravin/otus-final-project/tree/main/infra_deploy/k8s
 
-### inference
+#### inference
 
 В данном случае модулируем ситуацию, при которой мы передаем свежую строку со значениями 
 body5 = {
@@ -103,6 +104,17 @@ body5 = {
 
 В примереме выше мы реализовали ingress сервисе, который позволяли обращаться к приложению прямо по URL
 
+#### метрики
+
+В данном случае реализованы пара счетчиков в самом приложении:
+https://github.com/DATravin/otus-final-project/blob/main/infra_deploy/app/app.py 
+
+Но они в целом не играют существенной роли. так как не являются триггерами для переобучения модели.
+Модель, напомню, переобучается на регулярной основе вне зависимости от. 
+
+Тем не менее ниже продемонстрированы UI Grafana и Prrometheus
+
+![image](https://github.com/user-attachments/assets/640803bd-49d4-494e-9ddf-f79347cfe03b)
 
 
 
@@ -153,7 +165,7 @@ body5 = {
 
 
 
-   ![image](https://github.com/user-attachments/assets/640803bd-49d4-494e-9ddf-f79347cfe03b)
+
 
 
    ![image](https://github.com/user-attachments/assets/e8dd770f-f75f-4d0b-82c2-3ced4fc30d3d)
