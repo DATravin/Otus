@@ -128,6 +128,24 @@ https://github.com/DATravin/otus-final-project/blob/main/infra_deploy/app/app.py
 ![image](https://github.com/user-attachments/assets/e8dd770f-f75f-4d0b-82c2-3ced4fc30d3d)
 
 
+# CICD
+
+так же есть процесс по сборки контейнера и запуска приложения через github actions
+
+Он описан тут:
+
+https://github.com/DATravin/otus-final-project/blob/docker/.github/workflows/main.yml 
+
+В его процессе собирается контейнер. Пушится на docker hub
+
+Потом считывается и поднимается приложение
+
+![image](https://github.com/user-attachments/assets/2099b03a-9231-410a-a29b-8f878c114306)
+
+pipline отрабатывает. 
+
+Это альтернативный вариант запуска приложения без кубера
+
 
 
 
