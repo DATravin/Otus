@@ -10,7 +10,9 @@
 
 Архитектурно рабочая система разделена на 2 блока.
 
-infra_model: https://github.com/DATravin/otus-final-project/tree/main/infra_model 
+### infra_model 
+
+https://github.com/DATravin/otus-final-project/tree/main/infra_model 
 
 Данна инфраструктура представляем собой связку:
 
@@ -23,16 +25,37 @@ infra_model: https://github.com/DATravin/otus-final-project/tree/main/infra_mode
 - забрать с S3 дата сет с 4-х часовыми данными стоимости актива (в реально ситуации, данный забирались бы из БД, куда в свою очередь данные лились бы с биржи, но в данном случае у нас условно-боевая ситуция. Данные фиксированные)
 
 - собрать кластер,
-- запустить 2 дага 
--- расчет фичей
--- обучение/оптимимизация модели 
-  Даги: https://github.com/DATravin/otus-final-project/blob/main/dags/btc_two_step.py 
+- запустить 2 дага:
+- расчет фичей
+- обучение/оптимимизация модели
+  
+Даги: https://github.com/DATravin/otus-final-project/blob/main/dags/btc_two_step.py 
 
+результат отработки дага на скрине:
 
+![image](https://github.com/user-attachments/assets/1f261026-e7a4-4e46-8d10-7f9b4e95bc17)
 
+Предполагается, что переобучаем не в зависимости от метрик, а просто регулярно по расписанию (допустим каждую неделю)
 
+Опять же в боевой ситуации сервисы MLFLOW и AIRFLOW не тушаться. Поэтому модели мы складываем последовательно на MLFLOW, откуда в проде берется просто наиболее актуальная модель.
 
+Поэтому в учебных целях модель забирается не через API Mlflow, а из хранилища артефатов (S3)
 
+### оптимизация модели
+
+https://github.com/DATravin/otus-final-project/blob/main/src/model_optimisation.py 
+
+Модель оптимизируется по 2-м направлениям:
+
+- На первом шаге запускается отбор признаков с помощью Permutation
+- На втором шаге с помощью модуля optuna подбираются оптимальные параметры
+- результаты записываеются в Mlflow 
+
+ ![image](https://github.com/user-attachments/assets/c4f2b4ed-0221-4492-8030-15c560c35e16)
+
+В итоге лучшая модель записывается в MLFLOW
+
+ ![image](https://github.com/user-attachments/assets/50a5f961-770d-4375-a33b-dfc2ce6dcfd6)
 
 
 
@@ -66,17 +89,17 @@ infra_model: https://github.com/DATravin/otus-final-project/tree/main/infra_mode
 
    Здесь демонстрация штатной отработки всех дагов:
 
-  ![image](https://github.com/user-attachments/assets/1f261026-e7a4-4e46-8d10-7f9b4e95bc17)
+  
 
 
    Модели загружены в mlflow:
 
-   ![image](https://github.com/user-attachments/assets/c4f2b4ed-0221-4492-8030-15c560c35e16)
+  
 
 
    сами модели
 
-   ![image](https://github.com/user-attachments/assets/50a5f961-770d-4375-a33b-dfc2ce6dcfd6)
+  
 
 
 4) кубер поднять
