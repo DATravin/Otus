@@ -1,5 +1,5 @@
 
-# Построение сервиса прогнозирования биржевой стоимости актива» принята на рассмотрение
+# Построение сервиса прогнозирования биржевой стоимости актива»
 
 ## Цель работы
 
@@ -10,7 +10,9 @@
 
 Архитектурно рабочая система разделена на 2 блока.
 
-### infra_model 
+### БЛОК 1. infra_model 
+
+#### элементы сборки
 
 https://github.com/DATravin/otus-final-project/tree/main/infra_model 
 
@@ -41,7 +43,7 @@ https://github.com/DATravin/otus-final-project/tree/main/infra_model
 
 Поэтому в учебных целях модель забирается не через API Mlflow, а из хранилища артефатов (S3)
 
-### оптимизация модели
+#### оптимизация модели
 
 https://github.com/DATravin/otus-final-project/blob/main/src/model_optimisation.py 
 
@@ -56,6 +58,14 @@ https://github.com/DATravin/otus-final-project/blob/main/src/model_optimisation.
 В итоге лучшая модель записывается в MLFLOW
 
  ![image](https://github.com/user-attachments/assets/50a5f961-770d-4375-a33b-dfc2ce6dcfd6)
+
+## БЛОК 2. infra_deploy
+
+https://github.com/DATravin/otus-final-project/tree/main/infra_deploy 
+
+### Механика
+
+
 
 
 
