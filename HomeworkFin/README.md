@@ -4,6 +4,9 @@
 Ссылка на проект:
 https://github.com/DATravin/otus-final-project/tree/main 
 
+Ссылка на ветку с docker:
+https://github.com/DATravin/otus-final-project/tree/docker
+
 ## Цель работы
 
 Построить рабочий сервис по прогнозированию стоимости биткоина. 
