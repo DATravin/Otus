@@ -101,6 +101,8 @@ body5 = {
 
 ![image](https://github.com/user-attachments/assets/0d21dbe8-bfb3-4002-8194-1df523366cb5)
 
+В примереме выше мы реализовали ingress сервисе, который позволяли обращаться к приложению прямо по URL
+
 
 
 
