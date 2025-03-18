@@ -59,14 +59,47 @@ https://github.com/DATravin/otus-final-project/blob/main/src/model_optimisation.
 
  ![image](https://github.com/user-attachments/assets/50a5f961-770d-4375-a33b-dfc2ce6dcfd6)
 
-## БЛОК 2. infra_deploy
+### БЛОК 2. infra_deploy
 
 https://github.com/DATravin/otus-final-project/tree/main/infra_deploy 
 
+#### элементы сборки
+
+Данная архитектура состоит из 3х элементов:
+
+- VM с установленным docker
+- K8s cluster
+- dockerhub (хранилище образов)
+
 ### Механика
 
+При сборке происходит настройка всего окружение.
+А далее одним скриптом происходит:
+1) сборка свежего контейнера (туда подкладываются свежие ключи от S3)
+2) Push свежего образа на dockerhub ( https://github.com/DATravin/otus-final-project/blob/main/infra_deploy/modules/compute/scripts/setup_kuber.sh )
+3) поднятие сервиса на k8s
 
+Инструкции для k8s: https://github.com/DATravin/otus-final-project/tree/main/infra_deploy/k8s
 
+### inference
+
+В данном случае модулируем ситуацию, при которой мы передаем свежую строку со значениями 
+body5 = {
+        "TimeKey":['2021-07-07T20:00:00Z'],
+        "High":[34628.71],
+        "Low":[33777.77],
+        "Open":[34628.71],
+        "Close":[33862.12],
+        "Volume":[7923.75]
+        }
+далее происходит:
+
+-расчет фичей
+-скачивание модели c Mlflow (в данном случае с s3)
+-примерение модели
+-вердикт
+
+![image](https://github.com/user-attachments/assets/0d21dbe8-bfb3-4002-8194-1df523366cb5)
 
 
 
@@ -116,7 +149,6 @@ https://github.com/DATravin/otus-final-project/tree/main/infra_deploy
 
    Вердикты выдаются:
 
-![image](https://github.com/user-attachments/assets/0d21dbe8-bfb3-4002-8194-1df523366cb5)
 
 
    ![image](https://github.com/user-attachments/assets/640803bd-49d4-494e-9ddf-f79347cfe03b)
